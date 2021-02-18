@@ -1,0 +1,69 @@
+let mapleader=" "
+set nocompatible
+set backspace=indent,eol,start
+set cursorline
+set wrap
+set showcmd
+set wildmenu
+set nu
+set relativenumber
+set hlsearch
+exec "nohlsearch"
+set incsearch
+set ignorecase
+set smartcase
+noremap = nzz
+noremap - Nzz
+syntax on
+noremap n h
+noremap u k
+noremap e j
+noremap i l
+
+noremap U 5k
+noremap E 5j
+noremap N 5h
+noremap I 5l
+noremap <C-n> ^
+noremap <C-i> $
+noremap k i
+noremap K I
+noremap l u
+noremap <leader><CR> :nohlsearch<CR>
+map S :w<CR>
+map s <nop>
+
+map Q :q<CR>
+map R :source $MYVIMRC<CR>
+map ; :
+
+map si :set splitright<CR>:vsplit<CR>
+map sn :set nosplitright<CR>:vsplit<CR>
+map su :set nosplitbelow<CR>split<CR>
+map se :set splitbelow<CR>:split<CR>
+
+
+map <LEADER>i <C-w>l
+map <LEADER>n <C-w>h
+map <LEADER>u <C-w>k
+map <LEADER>e <C-w>j
+
+map <up> :res +5<CR>
+map <down> :res -5<CR>
+map <left> :vertical resize+5<CR>
+map <right> :vertical resize-5<CR>
+
+map tu :tabe<CR>
+map tn :-tabnext<CR>
+map ti :+tabnext<CR>
+
+map sv <C-w>t<C-w>H
+map sh <C-w>t<C-w>K
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'connorholyday/vim-snazzy'
+call plug#end()
+
+color snazzy
+
+
